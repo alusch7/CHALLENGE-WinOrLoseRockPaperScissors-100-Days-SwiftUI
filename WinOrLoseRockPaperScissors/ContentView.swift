@@ -60,13 +60,12 @@ struct ContentView: View {
                         .WorLTitle()
                 }
                 Spacer()
-                    .frame(maxHeight:50)
                 if rounds == 0 {
                     VStack {
                         Text("Choose an Emoji to Begin")
                             .foregroundColor(.white)
                             .font(.title.bold())
-                        Spacer()
+                        //Spacer()
                         Text("🤖")
                             .font(.system(size:150))
                             .padding()
@@ -76,18 +75,19 @@ struct ContentView: View {
                     Text("You \(outcomes)")
                         .foregroundColor(.white)
                         .font(.title.bold())
-                    Spacer()
+                    //Spacer()
                     Text("\(options[computer])")
                         .font(.system(size:150))
                         .padding()
                         .shadow(color: .black, radius: 1, x: 2, y: 2)
                 }
                 Spacer()
-                    .frame(maxHeight: 200)
+                Spacer()
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .frame(maxWidth: .infinity, maxHeight: 120)
                         .padding(.horizontal, 20)
+                        .padding(.vertical, 20)
                         .foregroundStyle(.ultraThinMaterial)
                     HStack {
                         ForEach(0..<3) { number in
